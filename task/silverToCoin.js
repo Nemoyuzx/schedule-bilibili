@@ -16,10 +16,12 @@ class silverToCoin extends base {
   order() {
     return 4;
   }
-
+  
+  //.code
+  
   async run() {
     const result = await this.request.get(this.silverToCoinURL);
-    if (result.code === 0) {
+    if (result === 0) {
       console.info('----- [银瓜子兑换硬币成功] -----');
     } else {
       console.info(`----- [银瓜子兑换硬币失败 原因是: ${result.msg}] -----`);
