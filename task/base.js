@@ -86,7 +86,7 @@ class Task {
 
     let title = '未能获取到标题';
     const result = await request.get(videoViewURL);
-    if (+result.code === 0) {
+    if (result === 0) {
       const owner = this._.get(result, 'data.owner.name');
       return owner + ' ' + result.data.title;
     }
