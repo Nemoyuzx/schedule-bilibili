@@ -24,8 +24,10 @@ class silverToCoin extends base {
     if (result === 0) {
       console.info('----- [银瓜子兑换硬币成功] -----');
     } else {
-      console.info(`----- [银瓜子兑换硬币失败 原因是: ${result.msg}] -----`);
+      console.info(`----- [银瓜子兑换硬币失败 原因是: ${result}] -----`);
     }
+    
+    //.msg
 
     const queryCoinStatus = await this.request.get(
       this.silverToCoinStatusURL,
