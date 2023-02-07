@@ -27,8 +27,7 @@ class coinAdd extends base {
     while (useCoin < maxNumberOfCoins) {
       addCoinOperateCount++;
 
-      const bvid =
-        user.rankList[parseInt(Math.random() * user.rankList.length)];
+      const bvid = await user.rankList[parseInt(Math.random() * user.rankList.length)];
       const title = await this.getVideoTitle(bvid);
       const coinFlag = await this.coinAdd(bvid, 1, 1);
 
